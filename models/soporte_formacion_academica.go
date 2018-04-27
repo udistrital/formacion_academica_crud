@@ -10,7 +10,7 @@ import (
 )
 
 type SoporteFormacionAcademica struct {
-	Id                 int                 `orm:"column(id);pk"`
+	Id                 int                 `orm:"column(id);pk;auto"`
 	FormacionAcademica *FormacionAcademica `orm:"column(formacion_academica);rel(fk)"`
 	Documento          int                 `orm:"column(documento)"`
 }

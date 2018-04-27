@@ -10,7 +10,7 @@ import (
 )
 
 type DatoAdicionalNivelFormacion struct {
-	Id                int `orm:"column(id);pk"`
+	Id                int `orm:"column(id);pk;auto"`
 	NivelFormacion    int `orm:"column(nivel_formacion)"`
 	TipoDatoAdicional int `orm:"column(tipo_dato_adicional)"`
 }

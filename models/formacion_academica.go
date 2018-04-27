@@ -11,7 +11,7 @@ import (
 )
 
 type FormacionAcademica struct {
-	Id           int       `orm:"column(id);pk"`
+	Id           int       `orm:"column(id);pk;auto"`
 	Persona      int       `orm:"column(persona)"`
 	FechaInicio  time.Time `orm:"column(fecha_inicio);type(date)"`
 	FechaGrado   time.Time `orm:"column(fecha_grado);type(date);null"`
