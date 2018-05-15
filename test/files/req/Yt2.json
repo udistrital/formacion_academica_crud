@@ -1,0 +1,15 @@
+{
+  "Type": "success",
+  "Code": "S_201",
+  "Body": {
+    "Id": 3,
+    "Nombre": "May 15, 2018 at 4:30pm (-05)",
+    "Descripcion": "string",
+    "CodigoAbreviacion": "string",
+    "Activo": true,
+    "NumeroOrden": 0,
+    "Tamano": 0,
+    "Extension": "",
+    "Workspace": ""
+  }
+}
