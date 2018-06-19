@@ -11,14 +11,17 @@ import (
 )
 
 type FormacionAcademica struct {
-	Id           int       `orm:"column(id);pk;auto"`
-	Persona      int       `orm:"column(persona)"`
-	FechaInicio  time.Time `orm:"column(fecha_inicio);type(date)"`
-	FechaGrado   time.Time `orm:"column(fecha_grado);type(date);null"`
-	Titulacion   int       `orm:"column(titulacion);null"`
-	Duracion     float64   `orm:"column(duracion);null"`
-	UnidadTiempo int       `orm:"column(unidad_tiempo)"`
-	Activo       bool      `orm:"column(activo)"`
+	Id                int       `orm:"column(id);pk;auto"`
+	Persona           int       `orm:"column(persona)"`
+	FechaInicio       time.Time `orm:"column(fecha_inicio);type(date)"`
+	FechaFinalizacion time.Time `orm:"column(fecha_finalizacion);type(date);null"`
+	Titulacion        int       `orm:"column(titulacion);null"`
+	Duracion          float64   `orm:"column(duracion);null"`
+	UnidadTiempo      int       `orm:"column(unidad_tiempo)"`
+	Activo            bool      `orm:"column(activo)"`
+	NivelFormacion    int       `orm:"column(nivel_formacion);null"`
+	Institucion       int       `orm:"column(institucion);null"`
+	Metodologia       int       `orm:"column(metodologia);null"`
 }
 
 func (t *FormacionAcademica) TableName() string {
