@@ -10,11 +10,11 @@ import (
 )
 
 type DatoAdicionalFormacionAcademica struct {
-	Id                          int                          `orm:"column(id);pk;auto"`
-	FormacionAcademica          *FormacionAcademica          `orm:"column(formacion_academica);rel(fk)"`
-	DatoAdicionalNivelFormacion *DatoAdicionalNivelFormacion `orm:"column(dato_adicional_nivel_formacion);rel(fk)"`
-	Valor                       string                       `orm:"column(valor)"`
-	Activo                      bool                         `orm:"column(activo)"`
+	Id                 int                 `orm:"column(id);pk;auto"`
+	FormacionAcademica *FormacionAcademica `orm:"column(formacion_academica);rel(fk)"`
+	TipoDatoAdicional  int                 `orm:"column(tipo_dato_adicional)"`
+	Valor              string              `orm:"column(valor)"`
+	Activo             bool                `orm:"column(activo)"`
 }
 
 func (t *DatoAdicionalFormacionAcademica) TableName() string {
