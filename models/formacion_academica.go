@@ -16,12 +16,6 @@ type FormacionAcademica struct {
 	FechaInicio       time.Time `orm:"column(fecha_inicio);type(date)"`
 	FechaFinalizacion time.Time `orm:"column(fecha_finalizacion);type(date);null"`
 	Titulacion        int       `orm:"column(titulacion);null"`
-	Duracion          float64   `orm:"column(duracion);null"`
-	UnidadTiempo      int       `orm:"column(unidad_tiempo)"`
-	Activo            bool      `orm:"column(activo)"`
-	NivelFormacion    int       `orm:"column(nivel_formacion);null"`
-	Institucion       int       `orm:"column(institucion);null"`
-	Metodologia       int       `orm:"column(metodologia);null"`
 }
 
 func (t *FormacionAcademica) TableName() string {
