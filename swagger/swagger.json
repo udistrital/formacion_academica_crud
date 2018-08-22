@@ -9,7 +9,8 @@
             "email": "astaxie@gmail.com"
         },
         "license": {
-            "name": "Url http://www.apache.org/licenses/LICENSE-2.0.html"
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         }
     },
     "basePath": "/v1",
@@ -19,7 +20,7 @@
                 "tags": [
                     "dato_adicional_formacion_academica"
                 ],
-                "summary": "get DatoAdicionalFormacionAcademica",
+                "description": "get DatoAdicionalFormacionAcademica",
                 "operationId": "DatoAdicionalFormacionAcademicaController.Get All",
                 "parameters": [
                     {
@@ -61,19 +62,21 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "models.DatoAdicionalFormacionAcademica",
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/DatoAdicionalFormacionAcademica"
+                            "$ref": "#/definitions/models.DatoAdicionalFormacionAcademica"
                         }
                     },
-                    "403": {}
+                    "403": {
+                        "description": ""
+                    }
                 }
             },
             "post": {
                 "tags": [
                     "dato_adicional_formacion_academica"
                 ],
-                "summary": "create DatoAdicionalFormacionAcademica",
+                "description": "create DatoAdicionalFormacionAcademica",
                 "operationId": "DatoAdicionalFormacionAcademicaController.Post",
                 "parameters": [
                     {
@@ -82,13 +85,13 @@
                         "description": "body for DatoAdicionalFormacionAcademica content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/DatoAdicionalFormacionAcademica"
+                            "$ref": "#/definitions/models.DatoAdicionalFormacionAcademica"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "models.DatoAdicionalFormacionAcademica"
+                        "description": "{int} models.DatoAdicionalFormacionAcademica"
                     },
                     "403": {
                         "description": "body is empty"
@@ -101,7 +104,7 @@
                 "tags": [
                     "dato_adicional_formacion_academica"
                 ],
-                "summary": "get DatoAdicionalFormacionAcademica by id",
+                "description": "get DatoAdicionalFormacionAcademica by id",
                 "operationId": "DatoAdicionalFormacionAcademicaController.Get One",
                 "parameters": [
                     {
@@ -114,9 +117,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "models.DatoAdicionalFormacionAcademica",
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/DatoAdicionalFormacionAcademica"
+                            "$ref": "#/definitions/models.DatoAdicionalFormacionAcademica"
                         }
                     },
                     "403": {
@@ -128,7 +131,7 @@
                 "tags": [
                     "dato_adicional_formacion_academica"
                 ],
-                "summary": "update the DatoAdicionalFormacionAcademica",
+                "description": "update the DatoAdicionalFormacionAcademica",
                 "operationId": "DatoAdicionalFormacionAcademicaController.Put",
                 "parameters": [
                     {
@@ -144,15 +147,15 @@
                         "description": "body for DatoAdicionalFormacionAcademica content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/DatoAdicionalFormacionAcademica"
+                            "$ref": "#/definitions/models.DatoAdicionalFormacionAcademica"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "models.DatoAdicionalFormacionAcademica",
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/DatoAdicionalFormacionAcademica"
+                            "$ref": "#/definitions/models.DatoAdicionalFormacionAcademica"
                         }
                     },
                     "403": {
@@ -164,7 +167,7 @@
                 "tags": [
                     "dato_adicional_formacion_academica"
                 ],
-                "summary": "delete the DatoAdicionalFormacionAcademica",
+                "description": "delete the DatoAdicionalFormacionAcademica",
                 "operationId": "DatoAdicionalFormacionAcademicaController.Delete",
                 "parameters": [
                     {
@@ -177,7 +180,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "delete success!"
+                        "description": "{string} delete success!"
                     },
                     "403": {
                         "description": "id is empty"
@@ -190,7 +193,7 @@
                 "tags": [
                     "formacion_academica"
                 ],
-                "summary": "get FormacionAcademica",
+                "description": "get FormacionAcademica",
                 "operationId": "FormacionAcademicaController.Get All",
                 "parameters": [
                     {
@@ -232,19 +235,21 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "models.FormacionAcademica",
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/FormacionAcademica"
+                            "$ref": "#/definitions/models.FormacionAcademica"
                         }
                     },
-                    "403": {}
+                    "403": {
+                        "description": ""
+                    }
                 }
             },
             "post": {
                 "tags": [
                     "formacion_academica"
                 ],
-                "summary": "create FormacionAcademica",
+                "description": "create FormacionAcademica",
                 "operationId": "FormacionAcademicaController.Post",
                 "parameters": [
                     {
@@ -253,13 +258,13 @@
                         "description": "body for FormacionAcademica content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/FormacionAcademica"
+                            "$ref": "#/definitions/models.FormacionAcademica"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "models.FormacionAcademica"
+                        "description": "{int} models.FormacionAcademica"
                     },
                     "403": {
                         "description": "body is empty"
@@ -272,7 +277,7 @@
                 "tags": [
                     "formacion_academica"
                 ],
-                "summary": "get FormacionAcademica by id",
+                "description": "get FormacionAcademica by id",
                 "operationId": "FormacionAcademicaController.Get One",
                 "parameters": [
                     {
@@ -285,9 +290,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "models.FormacionAcademica",
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/FormacionAcademica"
+                            "$ref": "#/definitions/models.FormacionAcademica"
                         }
                     },
                     "403": {
@@ -299,7 +304,7 @@
                 "tags": [
                     "formacion_academica"
                 ],
-                "summary": "update the FormacionAcademica",
+                "description": "update the FormacionAcademica",
                 "operationId": "FormacionAcademicaController.Put",
                 "parameters": [
                     {
@@ -315,15 +320,15 @@
                         "description": "body for FormacionAcademica content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/FormacionAcademica"
+                            "$ref": "#/definitions/models.FormacionAcademica"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "models.FormacionAcademica",
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/FormacionAcademica"
+                            "$ref": "#/definitions/models.FormacionAcademica"
                         }
                     },
                     "403": {
@@ -335,7 +340,7 @@
                 "tags": [
                     "formacion_academica"
                 ],
-                "summary": "delete the FormacionAcademica",
+                "description": "delete the FormacionAcademica",
                 "operationId": "FormacionAcademicaController.Delete",
                 "parameters": [
                     {
@@ -348,7 +353,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "delete success!"
+                        "description": "{string} delete success!"
                     },
                     "403": {
                         "description": "id is empty"
@@ -361,7 +366,7 @@
                 "tags": [
                     "soporte_formacion_academica"
                 ],
-                "summary": "get SoporteFormacionAcademica",
+                "description": "get SoporteFormacionAcademica",
                 "operationId": "SoporteFormacionAcademicaController.Get All",
                 "parameters": [
                     {
@@ -403,19 +408,21 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "models.SoporteFormacionAcademica",
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/SoporteFormacionAcademica"
+                            "$ref": "#/definitions/models.SoporteFormacionAcademica"
                         }
                     },
-                    "403": {}
+                    "403": {
+                        "description": ""
+                    }
                 }
             },
             "post": {
                 "tags": [
                     "soporte_formacion_academica"
                 ],
-                "summary": "create SoporteFormacionAcademica",
+                "description": "create SoporteFormacionAcademica",
                 "operationId": "SoporteFormacionAcademicaController.Post",
                 "parameters": [
                     {
@@ -424,13 +431,13 @@
                         "description": "body for SoporteFormacionAcademica content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/SoporteFormacionAcademica"
+                            "$ref": "#/definitions/models.SoporteFormacionAcademica"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "models.SoporteFormacionAcademica"
+                        "description": "{int} models.SoporteFormacionAcademica"
                     },
                     "403": {
                         "description": "body is empty"
@@ -443,7 +450,7 @@
                 "tags": [
                     "soporte_formacion_academica"
                 ],
-                "summary": "get SoporteFormacionAcademica by id",
+                "description": "get SoporteFormacionAcademica by id",
                 "operationId": "SoporteFormacionAcademicaController.Get One",
                 "parameters": [
                     {
@@ -456,9 +463,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "models.SoporteFormacionAcademica",
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/SoporteFormacionAcademica"
+                            "$ref": "#/definitions/models.SoporteFormacionAcademica"
                         }
                     },
                     "403": {
@@ -470,7 +477,7 @@
                 "tags": [
                     "soporte_formacion_academica"
                 ],
-                "summary": "update the SoporteFormacionAcademica",
+                "description": "update the SoporteFormacionAcademica",
                 "operationId": "SoporteFormacionAcademicaController.Put",
                 "parameters": [
                     {
@@ -486,15 +493,15 @@
                         "description": "body for SoporteFormacionAcademica content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/SoporteFormacionAcademica"
+                            "$ref": "#/definitions/models.SoporteFormacionAcademica"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "models.SoporteFormacionAcademica",
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/SoporteFormacionAcademica"
+                            "$ref": "#/definitions/models.SoporteFormacionAcademica"
                         }
                     },
                     "403": {
@@ -506,7 +513,7 @@
                 "tags": [
                     "soporte_formacion_academica"
                 ],
-                "summary": "delete the SoporteFormacionAcademica",
+                "description": "delete the SoporteFormacionAcademica",
                 "operationId": "SoporteFormacionAcademicaController.Delete",
                 "parameters": [
                     {
@@ -519,7 +526,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "delete success!"
+                        "description": "{string} delete success!"
                     },
                     "403": {
                         "description": "id is empty"
@@ -529,7 +536,7 @@
         }
     },
     "definitions": {
-        "DatoAdicionalFormacionAcademica": {
+        "models.DatoAdicionalFormacionAcademica": {
             "title": "DatoAdicionalFormacionAcademica",
             "type": "object",
             "properties": {
@@ -537,7 +544,7 @@
                     "type": "boolean"
                 },
                 "FormacionAcademica": {
-                    "$ref": "#/definitions/FormacionAcademica"
+                    "$ref": "#/definitions/models.FormacionAcademica"
                 },
                 "Id": {
                     "type": "integer",
@@ -552,15 +559,17 @@
                 }
             }
         },
-        "FormacionAcademica": {
+        "models.FormacionAcademica": {
             "title": "FormacionAcademica",
             "type": "object",
             "properties": {
                 "FechaFinalizacion": {
-                    "$ref": "#/definitions/\u0026{time Time}"
+                    "type": "string",
+                    "format": "string"
                 },
                 "FechaInicio": {
-                    "$ref": "#/definitions/\u0026{time Time}"
+                    "type": "string",
+                    "format": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -576,7 +585,7 @@
                 }
             }
         },
-        "SoporteFormacionAcademica": {
+        "models.SoporteFormacionAcademica": {
             "title": "SoporteFormacionAcademica",
             "type": "object",
             "properties": {
@@ -585,7 +594,7 @@
                     "format": "int64"
                 },
                 "FormacionAcademica": {
-                    "$ref": "#/definitions/FormacionAcademica"
+                    "$ref": "#/definitions/models.FormacionAcademica"
                 },
                 "Id": {
                     "type": "integer",

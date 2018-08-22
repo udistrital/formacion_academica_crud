@@ -377,11 +377,6 @@ definitions:
     title: FormacionAcademica
     type: object
     properties:
-      Activo:
-        type: boolean
-      Duracion:
-        type: number
-        format: double
       FechaFinalizacion:
         type: string
         format: string
@@ -391,22 +386,10 @@ definitions:
       Id:
         type: integer
         format: int64
-      Institucion:
-        type: integer
-        format: int64
-      Metodologia:
-        type: integer
-        format: int64
-      NivelFormacion:
-        type: integer
-        format: int64
       Persona:
         type: integer
         format: int64
       Titulacion:
-        type: integer
-        format: int64
-      UnidadTiempo:
         type: integer
         format: int64
   models.SoporteFormacionAcademica:
