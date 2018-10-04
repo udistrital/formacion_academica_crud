@@ -62,4 +62,4 @@ pipeline:
       {{/success}}
     when:
       status: [success, failure]
-      branch: [master, develop]   
+      branch: [master, develop]
