@@ -48,7 +48,7 @@ var opt = godog.Options{Output: colors.Colored(os.Stdout)}
 //@especificacion estructura de la fecha
 const especificacion = "Jan 2, 2006 at 3:04pm (MST)"
 
-//@TestMain para realizar la ejecucion con el comando go test ./test
+//@TestMain para realizar la ejecucion con el comando go test ./test otro
 func TestMain(m *testing.M) {
 	status := godog.RunWithOptions("godogs", func(s *godog.Suite) {
 		FeatureContext(s)
