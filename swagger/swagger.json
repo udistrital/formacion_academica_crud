@@ -565,11 +565,11 @@
             "properties": {
                 "FechaFinalizacion": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "FechaInicio": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "Id": {
                     "type": "integer",
