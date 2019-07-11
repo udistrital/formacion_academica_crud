@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
+	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -15,6 +16,7 @@ type DatoAdicionalFormacionAcademica struct {
 	TipoDatoAdicional  int                 `orm:"column(tipo_dato_adicional)"`
 	Valor              string              `orm:"column(valor)"`
 	Activo             bool                `orm:"column(activo)"`
+	FechaModificacion  string              `orm:"column(fecha_modificacion);null"`
 }
 
 func (t *DatoAdicionalFormacionAcademica) TableName() string {
@@ -28,6 +30,9 @@ func init() {
 // AddDatoAdicionalFormacionAcademica insert a new DatoAdicionalFormacionAcademica into database and returns
 // last inserted Id on success.
 func AddDatoAdicionalFormacionAcademica(m *DatoAdicionalFormacionAcademica) (id int64, err error) {
+	var t time.Time
+	t = time.Now()
+	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -127,6 +132,9 @@ func GetAllDatoAdicionalFormacionAcademica(query map[string]string, fields []str
 func UpdateDatoAdicionalFormacionAcademicaById(m *DatoAdicionalFormacionAcademica) (err error) {
 	o := orm.NewOrm()
 	v := DatoAdicionalFormacionAcademica{Id: m.Id}
+	var t time.Time
+	t = time.Now()
+	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64

@@ -16,6 +16,7 @@ type FormacionAcademica struct {
 	FechaInicio       time.Time `orm:"column(fecha_inicio);type(date)"`
 	FechaFinalizacion time.Time `orm:"column(fecha_finalizacion);type(date);null"`
 	Titulacion        int       `orm:"column(titulacion);null"`
+	FechaModificacion string    `orm:"column(fecha_modificacion);null"`
 }
 
 func (t *FormacionAcademica) TableName() string {
@@ -29,6 +30,9 @@ func init() {
 // AddFormacionAcademica insert a new FormacionAcademica into database and returns
 // last inserted Id on success.
 func AddFormacionAcademica(m *FormacionAcademica) (id int64, err error) {
+	var t time.Time
+	t = time.Now()
+	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -128,6 +132,9 @@ func GetAllFormacionAcademica(query map[string]string, fields []string, sortby [
 func UpdateFormacionAcademicaById(m *FormacionAcademica) (err error) {
 	o := orm.NewOrm()
 	v := FormacionAcademica{Id: m.Id}
+	var t time.Time
+	t = time.Now()
+	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64

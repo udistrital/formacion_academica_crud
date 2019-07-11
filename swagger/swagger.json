@@ -543,6 +543,9 @@
                 "Activo": {
                     "type": "boolean"
                 },
+                "FechaModificacion": {
+                    "type": "string"
+                },
                 "FormacionAcademica": {
                     "$ref": "#/definitions/models.FormacionAcademica"
                 },
@@ -571,6 +574,9 @@
                     "type": "string",
                     "format": "datetime"
                 },
+                "FechaModificacion": {
+                    "type": "string"
+                },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
@@ -592,6 +598,9 @@
                 "Documento": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "FechaModificacion": {
+                    "type": "string"
                 },
                 "FormacionAcademica": {
                     "$ref": "#/definitions/models.FormacionAcademica"
