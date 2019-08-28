@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/astaxie/beego/orm"
+	"github.com/udistrital/utils_oas/time_bogota"
 )
 
 type FormacionAcademica struct {
@@ -16,6 +17,7 @@ type FormacionAcademica struct {
 	FechaInicio       time.Time `orm:"column(fecha_inicio);type(date)"`
 	FechaFinalizacion time.Time `orm:"column(fecha_finalizacion);type(date);null"`
 	Titulacion        int       `orm:"column(titulacion);null"`
+	FechaCreacion     string    `orm:"column(fecha_creacion);null"`
 	FechaModificacion string    `orm:"column(fecha_modificacion);null"`
 }
 
@@ -30,9 +32,8 @@ func init() {
 // AddFormacionAcademica insert a new FormacionAcademica into database and returns
 // last inserted Id on success.
 func AddFormacionAcademica(m *FormacionAcademica) (id int64, err error) {
-	var t time.Time
-	t = time.Now()
-	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
+	m.FechaCreacion = time_bogota.TiempoBogotaFormato()
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -132,9 +133,7 @@ func GetAllFormacionAcademica(query map[string]string, fields []string, sortby [
 func UpdateFormacionAcademicaById(m *FormacionAcademica) (err error) {
 	o := orm.NewOrm()
 	v := FormacionAcademica{Id: m.Id}
-	var t time.Time
-	t = time.Now()
-	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64

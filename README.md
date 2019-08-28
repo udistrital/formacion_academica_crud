@@ -1,7 +1,6 @@
 # formacion_academica_crud
 API de registro de formación académica
 
-
 Integración con
 
  - `CI`
