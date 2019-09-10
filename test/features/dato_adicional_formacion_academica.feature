@@ -1,26 +1,40 @@
 Feature: Validate API responses
-  DOCUMENTOS_CRUD
+  FORMACION_ACADEMICA_CRUD
   probe JSON reponses
 
 
 Scenario Outline: To probe route code response  /dato_adicional_formacion_academica
-    When I send "<method>" request to "<route>" where body is json "<bodyreq>"
-    Then the response code should be "<codres>"      
+  When I send "<method>" request to "<route>" where body is json "<bodyreq>"
+  Then the response code should be "<codres>"      
 
-    Examples: 
-    |method |route                                  |bodyreq                 |codres       |
-    |GET    |/v1/dato_adicional_formacion_academica |./files/req/Vacio.json  |200 OK       |
-    |GET    |/v1/dato_adicional_formacion_academic  |./files/req/Vacio.json  |404 Not Found|
-    |POST   |/v1/dato_adicional_formacion_academic  |./files/req/Vacio.json  |404 Not Found|
-    |PUT    |/v1/dato_adicional_formacion_academic  |./files/req/Vacio.json  |404 Not Found|
-    |DELETE |/v1/dato_adicional_formacion_academic  |./files/req/Vacio.json  |404 Not Found|
+  Examples: 
+  |method|route                                 |bodyreq               |codres       |
+  |GET   |/v1/dato_adicional_formacion_academica|./files/req/Vacio.json|200 OK       |
+  |GET   |/v1/dato_adicional_formacion_academic |./files/req/Vacio.json|404 Not Found|
+  |POST  |/v1/dato_adicional_formacion_academic |./files/req/Vacio.json|404 Not Found|
+  |PUT   |/v1/dato_adicional_formacion_academic |./files/req/Vacio.json|404 Not Found|
+  |DELETE|/v1/dato_adicional_formacion_academic |./files/req/Vacio.json|404 Not Found|
+
 
 Scenario Outline: To probe response route /dato_adicional_formacion_academica       
-    When I send "<method>" request to "<route>" where body is json "<bodyreq>"
-    Then the response code should be "<codres>"      
-    And the response should match json "<bodyres>"
+  When I send "<method>" request to "<route>" where body is json "<bodyreq>"
+  Then the response code should be "<codres>"      
+  And the response should match json "<bodyres>"
 
-    Examples: 
-    |method |route                                   |bodyreq                |codres     |bodyres                         |
-    |POST   |/v1/dato_adicional_formacion_academica  |./files/req/Vacio.json |200 OK     |./files/res0/Ierr6.json         |
-    
+  Examples: 
+  |method|route                                 |bodyreq               |codres         |bodyres                 | 
+  |GET   |/v1/dato_adicional_formacion_academica|./files/req/Vacio.json|200 OK         |./files/res1/Vok1.json  |
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/Y2t1.json |201 Created    |./files/res1/Vok2.json  |
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/Vacio.json|400 Bad Request|./files/res1/Ierr1.json |
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/N2t1.json |400 Bad Request|./files/res1/Ierr2.json |
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/N2t2.json |400 Bad Request|./files/res1/Ierr3.json |
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/N2t3.json |400 Bad Request|./files/res1/Ierr4.json |
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/N2t4.json |400 Bad Request|./files/res1/Ierr5.json |
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/N2t5.json |400 Bad Request|./files/res1/Ierr6.json | 
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/N2t6.json |400 Bad Request|./files/res1/Ierr7.json | 
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/N2t7.json |400 Bad Request|./files/res1/Ierr8.json | 
+  |POST  |/v1/dato_adicional_formacion_academica|./files/req/Y2t2.json |400 Bad Request|./files/res1/Ierr9.json | 
+  |PUT   |/v1/dato_adicional_formacion_academica|./files/req/Y2t2.json |200 OK         |./files/res1/Vok2.json  |
+  |GETID |/v1/dato_adicional_formacion_academica|./files/req/Vacio.json|200 OK         |./files/res1/Vok2.json  |
+  |DELETE|/v1/dato_adicional_formacion_academica|./files/req/Vacio.json|200 OK         |./files/res1/Ino.json   |
+  |DELETE|/v1/dato_adicional_formacion_academica|./files/req/Vacio.json|404 Not Found  |./files/res1/Ierr10.json|

@@ -1,0 +1,13 @@
+{
+  "Development": null,
+  "Message": "The request contains incorrect syntax",
+  "Status": "400",
+  "System": {
+    "Layout": "\"2006-01-02T15:04:05Z07:00\"",
+    "Value": "0",
+    "LayoutElem": "\"",
+    "ValueElem": "0",
+    "Message": ""
+  }
+}
+
