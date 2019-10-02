@@ -1,6 +1,0 @@
-projectKey=formacion_academica_crud
-serverUrl=http://sonarqube.planestic.udistrital.edu.co:9005
-serverVersion=7.0.0.36138
-dashboardUrl=http://sonarqube.planestic.udistrital.edu.co:9005/dashboard/index/formacion_academica_crud
-ceTaskId=AW1pz9wmlGVdvusbrOKS
-ceTaskUrl=http://sonarqube.planestic.udistrital.edu.co:9005/api/ce/task?id=AW1pz9wmlGVdvusbrOKS

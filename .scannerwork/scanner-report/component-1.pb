@@ -1,1 +1,0 @@
- :	$qRformacion_academica_crud
