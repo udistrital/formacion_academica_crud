@@ -30,4 +30,4 @@ Definir los valores de las siguientes variables de entorno:
 FORMACION_ACADEMICA_HTTP_PORT=8098 FORMACION_ACADEMICA_CRUD__PGUSER=user FORMACION_ACADEMICA_CRUD__PGPASS=password FORMACION_ACADEMICA_CRUD__PGURLS=localhost FORMACION_ACADEMICA_CRUD__PGDB=bd FORMACION_ACADEMICA_CRUD__SCHEMA=schema_new bee run
 
 ## Modelo BD
-![image](https://github.com/planesticud/formacion_academica_crud/blob/develop/modelo_formacion_academica_crud.png).
+![modelo_formacion_academica_crud_git](https://user-images.githubusercontent.com/14035745/66046769-0e9b8a00-e4ec-11e9-8639-c4ec76377fa8.png)
