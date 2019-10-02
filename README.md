@@ -14,7 +14,7 @@ Go version >= 1.8.
 ## Preparación
 Para usar el API, usar el comando:
 
- - `go get github.com/planesticud/formacion_academica_crud`
+ - `go get github.com/udistrital/formacion_academica_crud`
 
 ## Ejecución
 Definir los valores de las siguientes variables de entorno:

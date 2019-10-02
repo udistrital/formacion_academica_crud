@@ -7,7 +7,7 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
-	"github.com/planesticud/formacion_academica_crud/models"
+	"github.com/udistrital/formacion_academica_crud/models"
 )
 
 // FormacionAcademicaController operations for FormacionAcademica
