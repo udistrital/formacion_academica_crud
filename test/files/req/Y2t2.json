@@ -1,0 +1,17 @@
+{
+  "Id": 32,
+  "FormacionAcademica": {
+    "Id": 1,
+    "Persona": 0,
+    "FechaInicio": "0001-01-01T00:00:00Z",
+    "FechaFinalizacion": "0001-01-01T00:00:00Z",
+    "Titulacion": 0,
+    "FechaCreacion": "",
+    "FechaModificacion": ""
+  },
+  "TipoDatoAdicional": 0,
+  "Valor": "string",
+  "Activo": true,
+  "FechaCreacion": "2019-09-10T13:09:34.591569488-05:00",
+  "FechaModificacion": "2019-09-10T13:09:34.591741494-05:00"
+}

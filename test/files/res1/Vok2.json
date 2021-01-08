@@ -1,0 +1,13 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "FormacionAcademica": { "type": "object" },
+    "TipoDatoAdicional": { "type": "integer" },
+    "Valor": { "type": "string" },
+    "Activo": { "type": "boolean" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" }
+  }
+}

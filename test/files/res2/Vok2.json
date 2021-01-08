@@ -1,0 +1,13 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "Persona": { "type": "integer" },
+    "FechaInicio": { "type": "string" },
+    "FechaFinalizacion": { "type": "string" },
+    "Titulacion": { "type": "integer" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" }
+  }
+}
