@@ -48,8 +48,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.DatoAdicionalFormacionAcademica'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - dato_adicional_formacion_academica
@@ -65,8 +65,8 @@ paths:
       responses:
         "201":
           description: '{int} models.DatoAdicionalFormacionAcademica'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /dato_adicional_formacion_academica/{id}:
     get:
       tags:
@@ -84,8 +84,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.DatoAdicionalFormacionAcademica'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - dato_adicional_formacion_academica
@@ -108,8 +108,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.DatoAdicionalFormacionAcademica'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - dato_adicional_formacion_academica
@@ -124,8 +124,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
   /formacion_academica/:
     get:
       tags:
@@ -163,8 +163,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.FormacionAcademica'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - formacion_academica
@@ -180,8 +180,8 @@ paths:
       responses:
         "201":
           description: '{int} models.FormacionAcademica'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /formacion_academica/{id}:
     get:
       tags:
@@ -199,8 +199,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.FormacionAcademica'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - formacion_academica
@@ -223,8 +223,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.FormacionAcademica'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - formacion_academica
@@ -239,8 +239,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
   /soporte_formacion_academica/:
     get:
       tags:
@@ -278,8 +278,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.SoporteFormacionAcademica'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - soporte_formacion_academica
@@ -295,8 +295,8 @@ paths:
       responses:
         "201":
           description: '{int} models.SoporteFormacionAcademica'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /soporte_formacion_academica/{id}:
     get:
       tags:
@@ -314,8 +314,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.SoporteFormacionAcademica'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - soporte_formacion_academica
@@ -338,8 +338,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.SoporteFormacionAcademica'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - soporte_formacion_academica
@@ -354,8 +354,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
 definitions:
   models.DatoAdicionalFormacionAcademica:
     title: DatoAdicionalFormacionAcademica
@@ -363,6 +363,10 @@ definitions:
     properties:
       Activo:
         type: boolean
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
       FormacionAcademica:
         $ref: '#/definitions/models.FormacionAcademica'
       Id:
@@ -377,27 +381,17 @@ definitions:
     title: FormacionAcademica
     type: object
     properties:
-      Activo:
-        type: boolean
-      Duracion:
-        type: number
-        format: double
+      FechaCreacion:
+        type: string
       FechaFinalizacion:
         type: string
-        format: string
+        format: datetime
       FechaInicio:
         type: string
-        format: string
+        format: datetime
+      FechaModificacion:
+        type: string
       Id:
-        type: integer
-        format: int64
-      Institucion:
-        type: integer
-        format: int64
-      Metodologia:
-        type: integer
-        format: int64
-      NivelFormacion:
         type: integer
         format: int64
       Persona:
@@ -406,16 +400,19 @@ definitions:
       Titulacion:
         type: integer
         format: int64
-      UnidadTiempo:
-        type: integer
-        format: int64
   models.SoporteFormacionAcademica:
     title: SoporteFormacionAcademica
     type: object
     properties:
+      Descripcion:
+        type: string
       Documento:
         type: integer
         format: int64
+      FechaCreacion:
+        type: string
+      FechaModificacion:
+        type: string
       FormacionAcademica:
         $ref: '#/definitions/models.FormacionAcademica'
       Id:

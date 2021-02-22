@@ -1,14 +1,14 @@
 package main
 
 import (
-	_ "github.com/udistrital/formacion_academica_crud/routers"
-
 	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
 	"github.com/astaxie/beego/plugins/cors"
 	_ "github.com/lib/pq"
+	_ "github.com/udistrital/formacion_academica_crud/routers"
+	"github.com/udistrital/auditoria"
 	apistatus "github.com/udistrital/utils_oas/apiStatusLib"
+	"github.com/udistrital/utils_oas/customerror"
 )
 
 func init() {
@@ -16,11 +16,12 @@ func init() {
 }
 
 func main() {
-	//orm.Debug = true
+	orm.Debug = true
 	if beego.BConfig.RunMode == "dev" {
 		beego.BConfig.WebConfig.DirectoryIndex = true
 		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
 	}
+
 	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
 		AllowOrigins: []string{"*"},
 		AllowMethods: []string{"PUT", "PATCH", "GET", "POST", "OPTIONS", "DELETE"},
@@ -34,11 +35,8 @@ func main() {
 		AllowCredentials: true,
 	}))
 
-	logPath := "{\"filename\":\""
-	logPath += beego.AppConfig.String("logPath")
-	logPath += "\"}"
-	logs.SetLogger(logs.AdapterFile, logPath)
-
 	apistatus.Init()
+	auditoria.InitMiddleware()
+	beego.ErrorController(&customerror.CustomErrorController{})
 	beego.Run()
 }

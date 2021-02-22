@@ -1,0 +1,24 @@
+{
+  "Development": null,
+  "Message": "The request contains incorrect syntax",
+  "Status": "400",
+  "System": {
+    "Severity": "ERROR",
+    "Code": "23503",
+    "Message": "inserción o actualización en la tabla «soporte_formacion_academica» viola la llave foránea «fk_soporte_formacion_academica_formacion_academica»",
+    "Detail": "La llave (formacion_academica)=(0) no está presente en la tabla «formacion_academica».",
+    "Hint": "",
+    "Position": "",
+    "InternalPosition": "",
+    "InternalQuery": "",
+    "Where": "",
+    "Schema": "formacion_academica",
+    "Table": "soporte_formacion_academica",
+    "Column": "",
+    "DataTypeName": "",
+    "Constraint": "fk_soporte_formacion_academica_formacion_academica",
+    "File": "ri_triggers.c",
+    "Line": "3266",
+    "Routine": "ri_ReportViolation"
+  }
+}

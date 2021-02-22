@@ -1,0 +1,24 @@
+{
+	"Development": null,
+	"Message": "The request contains incorrect syntax",
+	"Status": "400",
+	"System": {
+		"Severity": "ERROR",
+		"Code": "23505",
+		"Message": "llave duplicada viola restricción de unicidad «pk_dato_adicional_formacion_academica»",
+		"Detail": "Ya existe la llave (id)=(8).",
+		"Hint": "",
+		"Position": "",
+		"InternalPosition": "",
+		"InternalQuery": "",
+		"Where": "",
+		"Schema": "formacion_academica",
+		"Table": "dato_adicional_formacion_academica",
+		"Column": "",
+		"DataTypeName": "",
+		"Constraint": "pk_dato_adicional_formacion_academica",
+		"File": "nbtinsert.c",
+		"Line": "434",
+		"Routine": "_bt_check_unique"
+	}
+}
