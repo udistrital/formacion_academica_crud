@@ -119,3 +119,7 @@ ALTER TABLE formacion_academica.dato_adicional_formacion_academica ADD CONSTRAIN
 REFERENCES formacion_academica.formacion_academica (id) MATCH FULL
 ON DELETE RESTRICT ON UPDATE CASCADE;
 -- ddl-end --
+
+GRANT USAGE ON SCHEMA acta_recibido TO desarrollooas;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA acta_recibido TO desarrollooas;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA acta_recibido TO desarrollooas;

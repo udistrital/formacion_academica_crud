@@ -36,7 +36,6 @@ func main() {
 	}))
 
 	apistatus.Init()
-	auditoria.InitMiddleware()
 	beego.ErrorController(&customerror.CustomErrorController{})
 	beego.Run()
 }
