@@ -4,7 +4,7 @@ workspace:
   when:
       branch:
       - develop
-      - release
+      - release/*
       - master
 
 kind: pipeline
@@ -31,7 +31,7 @@ steps:
     branch:
     - develop
     - feature/*
-    - release
+    - release/*
     event:
     - push
 
@@ -43,7 +43,7 @@ steps:
     branch:
     - develop
     - feature/*
-    - release
+    - release/*
     event:
     - push
 
@@ -58,7 +58,6 @@ steps:
     - develop
     - release/*
     - feature/*
-    - release
     - master
     event:
     - push
@@ -80,7 +79,7 @@ steps:
     branch:
     - develop
     - feature/*
-    - release
+    - release/*
     - master
     event:
     - push
@@ -151,7 +150,7 @@ steps:
       - release
   when:
     branch:
-    - release
+    - release/*
     event:
     - push
 
@@ -207,7 +206,7 @@ steps:
     $GOPATH/bin/update-aws-ecs-service -cluster $CLUSTER -service $SERVICE -container-image $MYCONTAINER
   when:
     branch:
-    - release
+    - release/*
     - master
     event:
     - push
@@ -239,7 +238,7 @@ steps:
   when:
     branch:
     - develop
-    - release
+    - release/*
     - master
     event:
     - push
